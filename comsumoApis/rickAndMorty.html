@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800">
+    
+    
+    <header class="bg-green-400 text-white py-8">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold mb-2">Rick and Morty API</h1>
+            <p class="text-blue-200"></p>
+        </div>
+    </header>
+
+    
+    <div class="max-w-5xl mx-auto px-4 py-6">
+        
+        
+        <div class="text-center mb-6">
+            <button 
+                id="loadCharacters" 
+                class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded mr-3 mb-2">
+                Cargar Personajes
+            </button>
+            
+            <button 
+                id="loadMore" 
+                class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded mr-3 mb-2 hidden">
+                Ver Más
+            </button>
+            
+            <button 
+                id="clearData" 
+                class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded mb-2">
+                Limpiar
+            </button>
+        </div>
+
+        
+        <div id="loading" class="hidden text-center py-8">
+            <div class="inline-block w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+            <p class="text-gray-600 mt-3">Cargando...</p>
+        </div>
+
+        
+        <div id="error" class="hidden bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded mb-4">
+            <p id="errorMessage">Error al cargar datos</p>
+        </div>
+
+        
+        <div id="charactersContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+        </div>
+
+    </div>
+
+    <script src="rickAndMorty.js"></script>
+</body>
+</html>
